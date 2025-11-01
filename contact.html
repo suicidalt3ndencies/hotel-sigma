@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь - Гостиница "Премиум"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">ОТЕЛЬ "ПРЕМИУМ"</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <h1>Свяжитесь с нами</h1>
+            <p>Мы всегда рады помочь и ответить на ваши вопросы</p>
+        </section>
+
+        <div class="contact-container">
+            <section class="contact-form-section">
+                <h2>Форма обратной связи</h2>
+                <form id="feedbackForm" class="feedback-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Имя *</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactPhone">Телефон</label>
+                        <input type="tel" id="contactPhone" name="contactPhone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Тема обращения *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Выберите тему</option>
+                            <option value="booking">Бронирование номера</option>
+                            <option value="question">Общий вопрос</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="cooperation">Сотрудничество</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Сообщение *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Опишите ваш вопрос подробно..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" checked>
+                            <span class="checkmark"></span>
+                            Получать новости и специальные предложения
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agreement" required>
+                            <span class="checkmark"></span>
+                            Я соглашаюсь с обработкой персональных данных *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Отправить сообщение</button>
+                </form>
+
+                <div id="feedbackResult" class="feedback-result"></div>
+            </section>
+
+            <section class="contact-info">
+                <h2>Контактная информация</h2>
+                
+                <div class="contact-item">
+                    <h3>Телефоны</h3>
+                    <p>+7 (495) 123-45-67</p>
+                    <p>+7 (495) 123-45-68 (факс)</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>info@premium-hotel.ru</p>
+                    <p>booking@premium-hotel.ru</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Адрес</h3>
+                    <p>г. Ростов-на-Дону, ул. Большая Садовая, д. 25</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Режим работы</h3>
+                    <p>Круглосуточно</p>
+                    <p>Ресепшн: 24/7</p>
+                </div>
+
+                <div class="social-links">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">VK</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">Telegram</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Гостиница "Премиум". Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

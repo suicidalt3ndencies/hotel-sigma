@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Гостиница "Премиум"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">ОТЕЛЬ "ПРЕМИУМ"</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Регистрация</h1>
+        
+        <form id="registrationForm" class="registration-form">
+            <div class="form-group">
+                <label for="fullName">ФИО:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label>Пол:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Мужской</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Женский</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Страна:</label>
+                <select id="country" name="country">
+                    <option value="ru">Россия</option>
+                    <option value="kz">Казахстан</option>
+                    <option value="by">Беларусь</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Услуги:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="spa" name="services" value="spa">
+                    <label for="spa">SPA</label>
+                    <input type="checkbox" id="breakfast" name="services" value="breakfast">
+                    <label for="breakfast">Завтрак</label>
+                    <input type="checkbox" id="parking" name="services" value="parking">
+                    <label for="parking">Парковка</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Комментарии:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn-register">Зарегистрироваться</button>
+                <button type="button" class="btn-login">Вход</button>
+            </div>
+        </form>
+
+        <div id="registrationResult"></div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Гостиница "Премиум". Все права защищены.</p>
+            <p><a href="contact.html" style="color: var(--white);">Обратная связь</a></p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
