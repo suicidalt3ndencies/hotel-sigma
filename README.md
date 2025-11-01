@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Сайт гостиницы "Премиум"
 
 Корпоративный сайт гостиницы с адаптивным дизайном.
@@ -11,3 +12,7 @@
 
 ## Технологии
 HTML5, CSS3, JavaScript
+=======
+# hotel-sigma
+very sigma hotel booking website
+>>>>>>> 14c2e5a09f6271727127cefbf31802c7d6441c5a
