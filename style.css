@@ -1,6 +1,3 @@
-/* =========================
-   🎨 БАЗОВЫЕ СТИЛИ
-========================= */
 * {
     margin: 0;
     padding: 0;
@@ -27,10 +24,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
-/* =========================
-   🧭 ШАПКА
-========================= */
 .main-nav {
     background: var(--primary-color);
     color: var(--white);
@@ -58,10 +51,6 @@ body {
 .nav-links a:hover {
     color: var(--secondary-color);
 }
-
-/* =========================
-   🏠 ОСНОВНОЙ КОНТЕНТ
-========================= */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -84,10 +73,6 @@ main {
     font-size: 1.2rem;
     font-weight: bold;
 }
-
-/* =========================
-   📦 СЕКЦИИ
-========================= */
 section {
     margin-bottom: 3rem;
     padding: 2rem;
@@ -101,10 +86,6 @@ h2 {
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 0.5rem;
 }
-
-/* =========================
-   🏨 О ГОСТИНИЦЕ
-========================= */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,10 +96,6 @@ h2 {
     width: 100%;
     border-radius: 10px;
 }
-
-/* =========================
-   💼 УСЛУГИ
-========================= */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -142,10 +119,6 @@ h2 {
     border-radius: 5px;
     margin-bottom: 1rem;
 }
-
-/* =========================
-   🖼️ КЛИКАБЕЛЬНЫЕ ИЗОБРАЖЕНИЯ
-========================= */
 .clickable-image {
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -162,10 +135,6 @@ h2 {
 .clickable-image:hover img {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
-
-/* =========================
-   🪟 МОДАЛЬНОЕ ОКНО
-========================= */
 .modal {
     display: none;
     position: fixed;
@@ -212,10 +181,6 @@ h2 {
     padding: 10px 20px;
     border-radius: 5px;
 }
-
-/* =========================
-   🧾 ФОРМА РЕГИСТРАЦИИ
-========================= */
 .registration-form {
     max-width: 600px;
     margin: 0 auto;
@@ -247,43 +212,37 @@ h2 {
 .checkbox-label {
     display: flex;
     align-items: center;
-    gap: 0.6rem; /* расстояние между галочкой и текстом */
+    gap: 0.6rem; 
     cursor: pointer;
     font-weight: normal;
     position: relative;
 }
 
-/* Прячем стандартный чекбокс, чтобы не дублировался */
 .checkbox-label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-
-/* Стиль кастомного квадратика */
 .checkmark {
     width: 18px;
     height: 18px;
     border: 2px solid #ccc;
     border-radius: 3px;
     background-color: #fff;
-    flex-shrink: 0; /* не даёт чекбоксу сжиматься */
+    flex-shrink: 0; 
     display: inline-block;
     position: relative;
 }
 
-/* При наведении */
 .checkbox-label:hover .checkmark {
     border-color: var(--secondary-color);
 }
 
-/* Активное состояние */
 .checkbox-label input:checked + .checkmark {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
 }
 
-/* Галочка внутри чекбокса */
 .checkbox-label input:checked + .checkmark::after {
     content: "✓";
     color: #fff;
@@ -330,10 +289,6 @@ h2 {
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
-
-/* =========================
-   📰 НОВОСТИ
-========================= */
 .news-item {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
@@ -345,9 +300,6 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* =========================
-   📞 ОБРАТНАЯ СВЯЗЬ
-========================= */
 .contact-hero {
     text-align: center;
     padding: 3rem 0;
@@ -426,11 +378,6 @@ h2 {
     border-color: #f5c6cb;
     color: #721c24;
 }
-
-
-/* =========================
-   ⚓ ПОДВАЛ
-========================= */
 footer {
     background: var(--primary-color);
     color: var(--white);
@@ -446,10 +393,6 @@ footer {
 .footer-link:hover {
     color: var(--secondary-color);
 }
-
-/* =========================
-   📱 АДАПТИВНОСТЬ
-========================= */
 @media (max-width: 968px) {
     .contact-container {
         grid-template-columns: 1fr;

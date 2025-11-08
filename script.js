@@ -1,22 +1,3 @@
-// Отображение даты и времени на главной странице
-function updateDateTime() {
-    const now = new Date();
-    const options = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-    };
-    
-    const datetimeElement = document.getElementById('datetime');
-    if (datetimeElement) {
-        datetimeElement.textContent = now.toLocaleDateString('ru-RU', options);
-    }
-}
-
 // Модальное окно для изображений
 function initializeImageModal() {
     // Получаем модальное окно
@@ -179,22 +160,18 @@ function showFeedbackResult(message, type) {
     const resultElement = document.getElementById('feedbackResult');
     if (!resultElement) return;
 
-    // Удаляем предыдущие состояния
     resultElement.classList.remove('success', 'error');
     resultElement.innerHTML = '';
 
-    // Добавляем нужный класс
     if (type === 'error') {
         resultElement.classList.add('error');
     } else {
         resultElement.classList.add('success');
     }
 
-    // Показываем сообщение (включая HTML)
     resultElement.innerHTML = message;
     resultElement.style.display = 'block';
 
-    // Автоматически скрываем через 10 секунд
     setTimeout(() => {
         resultElement.classList.remove('success', 'error');
         resultElement.innerHTML = '';
