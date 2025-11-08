@@ -1,4 +1,6 @@
-/* Базовые стили */
+/* =========================
+   🎨 БАЗОВЫЕ СТИЛИ
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +9,6 @@
 html, body {
     height: 100%;
 }
-
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -17,508 +18,6 @@ html, body {
     --white: #ffffff;
     --shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
-
-/* Шапка */
-.main-nav {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--shadow);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--white);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--secondary-color);
-}
-
-/* Основной контент */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.hero {
-    text-align: center;
-    padding: 4rem 0;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    color: var(--white);
-    border-radius: 10px;
-    margin-bottom: 2rem;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Секции */
-section {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
-}
-
-/* О гостинице */
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-}
-
-.about-content img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Услуги */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    text-align: center;
-    padding: 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-/* Форма регистрации */
-.registration-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.radio-group,
-.checkbox-group {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
-
-.form-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.btn-register,
-.btn-login {
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-register {
-    background: var(--secondary-color);
-    color: var(--white);
-}
-
-.btn-login {
-    background: var(--primary-color);
-    color: var(--white);
-}
-
-.btn-register:hover {
-    background: #2980b9;
-}
-
-.btn-login:hover {
-    background: #34495e;
-}
-
-/* Новости */
-.news-item {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
-}
-
-.news-date {
-    color: #666;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-}
-
-/* Результат регистрации */
-#registrationResult {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-/* Подвал */
-footer {
-    background: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: auto;
-    flex-shrink: 0;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .main-nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .nav-links {
-        gap: 1rem;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .form-buttons {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 1rem;
-    }
-    
-    section {
-        padding: 1rem;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Стили для страницы обратной связи */
-.contact-hero {
-    text-align: center;
-    padding: 3rem 0;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    color: var(--white);
-    border-radius: 10px;
-    margin-bottom: 2rem;
-}
-
-.contact-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.contact-hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.contact-form-section,
-.contact-info {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.feedback-form .form-group {
-    margin-bottom: 1.5rem;
-}
-
-.feedback-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.feedback-form input,
-.feedback-form select,
-.feedback-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.feedback-form input:focus,
-.feedback-form select:focus,
-.feedback-form textarea:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-.checkbox-label input {
-    width: auto;
-    margin-right: 0.5rem;
-}
-
-.checkmark {
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ddd;
-    border-radius: 3px;
-    margin-right: 10px;
-    position: relative;
-}
-
-.checkbox-label input:checked + .checkmark {
-    background: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-
-.checkbox-label input:checked + .checkmark::after {
-    content: '✓';
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
-}
-
-.btn-submit {
-    width: 100%;
-    padding: 1rem;
-    background: var(--accent-color);
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-    background: #c0392b;
-}
-
-.contact-item {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-}
-
-.contact-item:last-child {
-    border-bottom: none;
-}
-
-.contact-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.social-links {
-    margin-top: 2rem;
-}
-
-.social-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.social-icon {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--background-color);
-    border-radius: 5px;
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: background-color 0.3s ease;
-}
-
-.social-icon:hover {
-    background: var(--secondary-color);
-    color: var(--white);
-}
-
-.map-section {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    margin-bottom: 2rem;
-}
-
-.map-placeholder {
-    height: 300px;
-    background: var(--background-color);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.map-fallback {
-    color: #666;
-}
-
-.feedback-result {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
-    color: #155724;
-}
-
-.feedback-result.error {
-    background: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
-}
-
-/* Адаптивность для обратной связи */
-@media (max-width: 968px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-hero h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-container {
-        gap: 1rem;
-    }
-    
-    .contact-form-section,
-    .contact-info {
-        padding: 1rem;
-    }
-}
-/* Базовые стили */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --background-color: #ecf0f1;
-    --white: #ffffff;
-    --shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -529,7 +28,9 @@ body {
     min-height: 100vh;
 }
 
-/* Шапка */
+/* =========================
+   🧭 ШАПКА
+========================= */
 .main-nav {
     background: var(--primary-color);
     color: var(--white);
@@ -539,37 +40,34 @@ body {
     align-items: center;
     box-shadow: var(--shadow);
 }
-
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--white);
 }
-
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
-
 .nav-links a {
     color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 .nav-links a:hover {
     color: var(--secondary-color);
 }
 
-/* Основной контент */
+/* =========================
+   🏠 ОСНОВНОЙ КОНТЕНТ
+========================= */
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     flex: 1 0 auto;
 }
-
 .hero {
     text-align: center;
     padding: 4rem 0;
@@ -578,18 +76,18 @@ main {
     border-radius: 10px;
     margin-bottom: 2rem;
 }
-
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
-
 #datetime {
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-/* Секции */
+/* =========================
+   📦 СЕКЦИИ
+========================= */
 section {
     margin-bottom: 3rem;
     padding: 2rem;
@@ -597,7 +95,6 @@ section {
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
-
 h2 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
@@ -605,38 +102,39 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-/* О гостинице */
+/* =========================
+   🏨 О ГОСТИНИЦЕ
+========================= */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
 }
-
 .about-content img {
     width: 100%;
     border-radius: 10px;
 }
 
-/* Услуги */
+/* =========================
+   💼 УСЛУГИ
+========================= */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
-
 .service-card {
     text-align: center;
     padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .service-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
-
 .service-card img {
     width: 100%;
     height: 200px;
@@ -645,28 +143,29 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Кликабельные изображения */
+/* =========================
+   🖼️ КЛИКАБЕЛЬНЫЕ ИЗОБРАЖЕНИЯ
+========================= */
 .clickable-image {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
 .clickable-image:hover {
     transform: scale(1.02);
 }
-
 .clickable-image img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
 }
-
 .clickable-image:hover img {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* Модальное окно */
+/* =========================
+   🪟 МОДАЛЬНОЕ ОКНО
+========================= */
 .modal {
     display: none;
     position: fixed;
@@ -675,10 +174,9 @@ h2 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0,0,0,0.9);
     animation: fadeIn 0.3s ease;
 }
-
 .modal-content {
     display: block;
     margin: auto;
@@ -691,7 +189,6 @@ h2 {
     transform: translate(-50%, -50%);
     border-radius: 8px;
 }
-
 .close-modal {
     position: absolute;
     top: 20px;
@@ -700,72 +197,296 @@ h2 {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1001;
     transition: color 0.3s ease;
 }
-
 .close-modal:hover {
     color: #ff6b6b;
 }
-
 #modalCaption {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    text-align: center;
     background: rgba(0,0,0,0.7);
     padding: 10px 20px;
     border-radius: 5px;
 }
 
-/* Анимации */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* =========================
+   🧾 ФОРМА РЕГИСТРАЦИИ
+========================= */
+.registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem; /* расстояние между галочкой и текстом */
+    cursor: pointer;
+    font-weight: normal;
+    position: relative;
 }
 
-/* Адаптивность */
+/* Прячем стандартный чекбокс, чтобы не дублировался */
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Стиль кастомного квадратика */
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    flex-shrink: 0; /* не даёт чекбоксу сжиматься */
+    display: inline-block;
+    position: relative;
+}
+
+/* При наведении */
+.checkbox-label:hover .checkmark {
+    border-color: var(--secondary-color);
+}
+
+/* Активное состояние */
+.checkbox-label input:checked + .checkmark {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Галочка внутри чекбокса */
+.checkbox-label input:checked + .checkmark::after {
+    content: "✓";
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.btn-register,
+.btn-login {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-register {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+.btn-login {
+    background: var(--primary-color);
+    color: var(--white);
+}
+.btn-register:hover {
+    background: #2980b9;
+}
+.btn-login:hover {
+    background: #34495e;
+}
+#registrationResult {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   📰 НОВОСТИ
+========================= */
+.news-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.news-date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   📞 ОБРАТНАЯ СВЯЗЬ
+========================= */
+.contact-hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--white);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.contact-form-section,
+.contact-info {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+}
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-submit:hover {
+    background: #c0392b;
+}
+.feedback-result {
+    display: none;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    color: #155724;
+}
+
+.feedback-result.show {
+    display: block;
+}
+
+.feedback-result.error {
+    display: block;
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+
+/* =========================
+   ⚓ ПОДВАЛ
+========================= */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+.footer-link {
+    color: var(--white);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+.footer-link:hover {
+    color: var(--secondary-color);
+}
+
+/* =========================
+   📱 АДАПТИВНОСТЬ
+========================= */
+@media (max-width: 968px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
 @media (max-width: 768px) {
     .main-nav {
         flex-direction: column;
         gap: 1rem;
     }
-    
     .nav-links {
         gap: 1rem;
     }
-    
     .about-content {
         grid-template-columns: 1fr;
     }
-    
-    .hero h1 {
+    .hero h1,
+    .contact-hero h1 {
         font-size: 2rem;
     }
-    
+    .form-buttons {
+        flex-direction: column;
+    }
     .modal-content {
         width: 95%;
     }
-    
-    .close-modal {
-        top: 10px;
-        right: 20px;
-        font-size: 30px;
-    }
 }
-
 @media (max-width: 480px) {
-    main {
+    main, section {
         padding: 1rem;
     }
-    
-    section {
-        padding: 1rem;
-    }
-    
     .services-grid {
         grid-template-columns: 1fr;
+    }
+    .contact-form-section,
+    .contact-info {
+        padding: 1rem;
     }
 }

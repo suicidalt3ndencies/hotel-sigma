@@ -177,17 +177,31 @@ function getSubjectName(code) {
 
 function showFeedbackResult(message, type) {
     const resultElement = document.getElementById('feedbackResult');
-    if (resultElement) {
-        resultElement.innerHTML = message;
-        resultElement.className = 'feedback-result ' + (type === 'error' ? 'error' : '');
-        
-        // Автоматически скрыть через 10 секунд
-        setTimeout(() => {
-            resultElement.innerHTML = '';
-            resultElement.className = 'feedback-result';
-        }, 10000);
+    if (!resultElement) return;
+
+    // Удаляем предыдущие состояния
+    resultElement.classList.remove('success', 'error');
+    resultElement.innerHTML = '';
+
+    // Добавляем нужный класс
+    if (type === 'error') {
+        resultElement.classList.add('error');
+    } else {
+        resultElement.classList.add('success');
     }
+
+    // Показываем сообщение (включая HTML)
+    resultElement.innerHTML = message;
+    resultElement.style.display = 'block';
+
+    // Автоматически скрываем через 10 секунд
+    setTimeout(() => {
+        resultElement.classList.remove('success', 'error');
+        resultElement.innerHTML = '';
+        resultElement.style.display = 'none';
+    }, 10000);
 }
+
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
